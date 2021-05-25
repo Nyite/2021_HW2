@@ -1,0 +1,6 @@
+parallel.c:12:6:ParallelIn_init	8	static
+parallel.c:19:6:ParallelOut_init	8	static
+parallel.c:27:6:Parallel_appendData	4	static
+parallel.c:33:6:ParallelTranceive	8	static
+parallel.c:69:6:Parallel_stopTranfer	8	static
+parallel.c:76:6:Parallel_stopReception	8	static

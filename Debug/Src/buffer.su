@@ -1,0 +1,4 @@
+buffer.c:6:6:BufferTx_init	24	static
+buffer.c:14:6:BufferRx_init	16	static
+buffer.c:20:9:Buffer_Eof	16	static
+buffer.c:27:6:Buffer_reset	16	static

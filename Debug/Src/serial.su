@@ -1,0 +1,9 @@
+core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+core_cm4.h:1724:22:__NVIC_DisableIRQ	16	static,ignoring_inline_asm
+serial.c:15:6:SerialOut_init	8	static
+serial.c:22:6:SerialIn_init	8	static
+serial.c:32:6:SerialSetData	4	static
+serial.c:59:6:SerialGetData	8	static
+serial.c:86:6:Serial_trancieveData	8	static
+serial.c:113:6:SerialOut_stopSend	8	static
+serial.c:120:6:SerialIn_stopReceive	8	static
