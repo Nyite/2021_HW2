@@ -7,7 +7,7 @@
 #define MASTER_MODE	0
 #define SLAVE_MODE	1
 
-#define BUFFER_SIZE 256
+#define BUFFER_SIZE	256
 
 enum FREQ {
 	FREQ_0		=	0x0,

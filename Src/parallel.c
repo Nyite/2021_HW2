@@ -1,6 +1,7 @@
 #include "parallel.h"
 #include "gpio.h"
 #include "buffer.h"
+#include "mem.h"
 
 extern uint8_t DeviceMode;
 extern BUFFER dataTx_buf;
@@ -68,14 +69,16 @@ void ParallelTranceive()
 
 void Parallel_stopTranfer()
 {
+//	ParReadyFlag = PAR_READY;
 	ParTranferFlag = PAR_STOP;
 	GPIOE_setByte(0x00); // reset bus pins
-	Buffer_reset(&dataTx_buf);
+//	Buffer_reset(&dataTx_buf);
 }
 
 void Parallel_stopReception()
 {
-//	DeviceMode = SLAVE_MODE; // IF PARALLERL IS FASTER THAN SERIAL
+	ParReadyFlag = PAR_READY;
+	ParTranferFlag = PAR_STOP;
+//	DeviceMode = SLAVE_MODE; // UNLESS PARALLERL IS FASTER THAN SERIAL
 	GPIOE_ParallelOut_init();
-	Buffer_reset(&dataRx_buf);
 }

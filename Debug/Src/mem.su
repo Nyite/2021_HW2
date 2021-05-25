@@ -1,0 +1,5 @@
+mem.c:3:13:UnlockFlash	4	static
+mem.c:14:13:LockFlash	4	static
+mem.c:20:6:EraseSector	8	static
+mem.c:36:6:WriteToFlash	24	static
+mem.c:56:6:HWReadFromFlash	16	static

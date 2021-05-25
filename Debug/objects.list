@@ -2,6 +2,7 @@
 "Src/buffer.o"
 "Src/gpio.o"
 "Src/main.o"
+"Src/mem.o"
 "Src/parallel.o"
 "Src/serial.o"
 "Src/syscalls.o"

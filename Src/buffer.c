@@ -8,7 +8,7 @@ void BufferTx_init(BUFFER *B)
 	B->ptr = 0;
 	// Preset values to be transmitted //
 	for (int i = 0; i < BUFFER_SIZE; i++)
-		B->data[i] = i;
+		B->data[i] = BUFFER_SIZE - i - 1;
 }
 
 void BufferRx_init(BUFFER *B)

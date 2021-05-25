@@ -2,6 +2,7 @@
 #include "gpio.h"
 #include "tim.h"
 #include "buffer.h"
+#include "mem.h"
 
 uint8_t SerialSetBitFlag;
 uint8_t SerialReceiveBitFlag;
@@ -114,11 +115,16 @@ void SerialOut_stopSend()
 {
 	NVIC_DisableIRQ(TIM3_IRQn);
 	SerialIn_init();
+	WriteToFlash(&dataRx_buf.data[0], BUFFER_SIZE);
 	DeviceMode = SLAVE_MODE;
+	Buffer_reset(&dataTx_buf);
 }
 
 void SerialIn_stopReceive()
 {
 	NVIC_DisableIRQ(TIM3_IRQn);
+	WriteToFlash(&dataRx_buf.data[0], BUFFER_SIZE);
 	SerialIn_init();
+	DeviceMode = SLAVE_MODE;
+	Buffer_reset(&dataTx_buf);
 }
